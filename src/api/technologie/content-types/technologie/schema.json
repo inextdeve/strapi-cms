@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies",
+  "info": {
+    "singularName": "technologie",
+    "pluralName": "technologies",
+    "displayName": "Technologie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "our_works": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::our-work.our-work",
+      "inversedBy": "technologies"
+    },
+    "gigs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gig.gig",
+      "inversedBy": "technologies"
+    }
+  }
+}

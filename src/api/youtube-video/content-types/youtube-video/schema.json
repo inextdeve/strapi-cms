@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "youtube_videos",
+  "info": {
+    "singularName": "youtube-video",
+    "pluralName": "youtube-videos",
+    "displayName": "YoutubeVideo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "videoLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "views": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

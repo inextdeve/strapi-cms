@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gigs",
+  "info": {
+    "singularName": "gig",
+    "pluralName": "gigs",
+    "displayName": "Gig",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "offer": {
+      "type": "richtext",
+      "required": true
+    },
+    "offerFeatures": {
+      "type": "json",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technologie.technologie",
+      "mappedBy": "gigs"
+    }
+  }
+}
